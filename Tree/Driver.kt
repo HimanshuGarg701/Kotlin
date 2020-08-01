@@ -9,4 +9,11 @@ fun main(args : Array<String>){
 
     x.print()
 
+    println("\n----------------Iterative add--------------------------")
+    var y = Tree()
+    y.iterativeAdd(15)
+    y.iterativeAdd(5)
+    y.iterativeAdd(20)
+
+    y.print()
 }

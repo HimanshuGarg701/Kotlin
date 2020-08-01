@@ -37,4 +37,33 @@ class Tree {
             printHelper(node.right);
         }
     }
+
+    fun iterativeAdd(data : Int){
+        if(root!=null){
+            iterativeAddHelper(root!!, data)
+        }else{
+            root = Node(data)
+        }
+    }
+
+    private fun iterativeAddHelper(node : Node, data: Int){
+        var current : Node? = node;
+        var parent : Node? = null;
+
+        while(current!=null){
+            parent = current;
+            if(data < current.data){
+                current = current.left;
+            }
+            else if(current.data<data){
+                current  = current.right;
+            }
+        }
+
+        if(data < parent!!.data){
+            parent.left = Node(data);
+        }else{
+            parent.right = Node(data);
+        }
+    }
 }
