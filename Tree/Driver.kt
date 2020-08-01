@@ -22,4 +22,7 @@ fun main(args : Array<String>){
 
     println("--------------------HEIGHT OF TREE---------------------------")
     x.height()
+
+    println("--------------------CHECK SAME TREES---------------------------")
+    println("x and y are same: ${x.checkSame(x.root, y.root)}")
 }

@@ -103,4 +103,15 @@ class Tree {
             return 1 + Math.max(left, right)
         }
     }
+
+    fun checkSame(node1 : Node?, node2:Node?):Boolean{
+        if(node1==null && node2==null){
+            return true;
+        }
+        else if(node1==null || node2==null){
+            return false;
+        }else{
+            return (node1.data==node2.data) && checkSame(node1.right, node2.right) && checkSame(node1.left, node2.left)
+        }
+    }
 }
