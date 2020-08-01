@@ -30,5 +30,11 @@ class Tree {
         }
     }
 
-    private fun printHelper()
+    private fun printHelper(node : Node?){
+        if(node!=null){
+            printHelper(node.left);
+            print("${node.data}  ");
+            printHelper(node.right);
+        }
+    }
 }
