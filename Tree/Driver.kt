@@ -17,6 +17,9 @@ fun main(args : Array<String>){
 
     y.print()
 
-    println("--------------------SIZE OF TREE-----------------------------")
+    println("\n--------------------SIZE OF TREE-----------------------------")
     x.size();
+
+    println("--------------------HEIGHT OF TREE---------------------------")
+    x.height()
 }

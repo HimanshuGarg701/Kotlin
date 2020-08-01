@@ -85,4 +85,22 @@ class Tree {
             return 1 + left + right;
         }
     }
+
+    fun height(){
+        if(root==null){
+            println("Height of tree is 0");
+        }else{
+            println("Height of tree is ${heightHelper(root!!)}");
+        }
+    }
+
+    private fun heightHelper(node : Node?) : Int{
+        if(node==null){
+            return 0;
+        }else{
+            var left = heightHelper(node.left)
+            var right = heightHelper(node.right)
+            return 1 + Math.max(left, right)
+        }
+    }
 }
