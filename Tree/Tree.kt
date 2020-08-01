@@ -114,4 +114,43 @@ class Tree {
             return (node1.data==node2.data) && checkSame(node1.right, node2.right) && checkSame(node1.left, node2.left)
         }
     }
+
+    fun rootToLeafSum(sum : Int){
+        if(root==null){
+            println("Given sum not present")
+        }else{
+            val list = ArrayList<Int>()
+            checkSumHelper(root!!, sum, list)
+            println(list.size)
+            for(i in list){
+                print("$i   ")
+            }
+        }
+    }
+
+    private fun checkSumHelper(node : Node?, sum : Int, list : ArrayList<Int>) : Boolean{
+        if(node==null){
+            return false;
+        }
+        if(node.left==null && node.right==null){
+            if(node.data==sum){
+                list.add(node.data)
+                return true
+            }else{
+                return false
+            }
+        }
+
+        if(checkSumHelper(node.left, sum-node.data, list)){
+            list.add(node.data)
+            return true
+        }
+
+        if (checkSumHelper(node.right, sum-node.data, list)){
+            list.add(node.data)
+            return true
+        }
+
+        return false;
+    }
 }

@@ -25,4 +25,7 @@ fun main(args : Array<String>){
 
     println("--------------------CHECK SAME TREES---------------------------")
     println("x and y are same: ${x.checkSame(x.root, y.root)}")
+
+    println("-------------------ROOT TO LEAF SUM---------------------------")
+    x.rootToLeafSum(35)
 }
