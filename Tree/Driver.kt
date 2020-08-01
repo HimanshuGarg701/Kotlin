@@ -28,4 +28,7 @@ fun main(args : Array<String>){
 
     println("-------------------ROOT TO LEAF SUM---------------------------")
     x.rootToLeafSum(35)
+
+    println("\n------------------CHECK VALID BST----------------------------")
+    x.validBST()
 }

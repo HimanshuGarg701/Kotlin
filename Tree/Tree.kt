@@ -121,7 +121,6 @@ class Tree {
         }else{
             val list = ArrayList<Int>()
             checkSumHelper(root!!, sum, list)
-            println(list.size)
             for(i in list){
                 print("$i   ")
             }
@@ -152,5 +151,26 @@ class Tree {
         }
 
         return false;
+    }
+
+    fun validBST(){
+        if(root==null){
+            println("VALID BST")
+        }else{
+            println("Given tree is valid? : ${validBstHelper(root!!, Int.MAX_VALUE, Int.MIN_VALUE)}")
+        }
+    }
+
+    private fun validBstHelper(node : Node?, max:Int, min:Int) : Boolean{
+        if(node==null){
+            return true
+        }
+
+        if(node.data < min || node.data > max){
+            return false
+        }
+
+        return validBstHelper(node.left, node.data, min) && validBstHelper(node.right, max, node.data)
+
     }
 }
