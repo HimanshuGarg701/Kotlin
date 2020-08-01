@@ -66,4 +66,23 @@ class Tree {
             parent.right = Node(data);
         }
     }
+
+    fun size(){
+        if(root==null){
+            println("Size is 0");
+        }
+        else{
+            println("size of tree is : ${sizeHelper(root!!)}");
+        }
+    }
+
+    private fun sizeHelper(node: Node?) : Int{
+        if(node==null){
+            return 0;
+        }else{
+            var left = sizeHelper(node.left);
+            var right = sizeHelper(node.right)
+            return 1 + left + right;
+        }
+    }
 }

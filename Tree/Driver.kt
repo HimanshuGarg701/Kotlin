@@ -16,4 +16,7 @@ fun main(args : Array<String>){
     y.iterativeAdd(20)
 
     y.print()
+
+    println("--------------------SIZE OF TREE-----------------------------")
+    x.size();
 }
