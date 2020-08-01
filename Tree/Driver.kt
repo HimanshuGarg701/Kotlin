@@ -31,4 +31,7 @@ fun main(args : Array<String>){
 
     println("\n------------------CHECK VALID BST----------------------------")
     x.validBST()
+
+    println("\n------------------LEVEL ORDER---------------------------")
+    x.levelOrderPrint()
 }

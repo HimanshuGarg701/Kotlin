@@ -1,5 +1,8 @@
 package Tree
 
+import java.util.*
+import kotlin.collections.ArrayList
+
 class Tree {
 
     var root : Node? = null;
@@ -172,5 +175,25 @@ class Tree {
 
         return validBstHelper(node.left, node.data, min) && validBstHelper(node.right, max, node.data)
 
+    }
+
+    fun levelOrderPrint(){
+        if(root==null){
+            println("Cannot find data")
+        }
+        else{
+            val queue : Queue<Node> = LinkedList<Node>()
+            queue.add(root)
+            while(!queue.isEmpty()){
+                val removed = queue.poll()
+                print("  ${removed.data}  ")
+                if(removed.left!=null){
+                    queue.add(removed.left)
+                }
+                if(removed.right!=null){
+                    queue.add(removed.right)
+                }
+            }
+        }
     }
 }
