@@ -40,4 +40,7 @@ fun main(args : Array<String>){
 
     println("\n-------------------Iterative pre order-----------------------")
     x.iterativePreorder()
+
+    println("\n----------------------Iterative InOrder---------------------------")
+    x.iterativeInOrder()
 }

@@ -240,4 +240,42 @@ class Tree {
             }
         }
     }
+
+    fun iterativeInOrder(){
+        if(root==null){
+            println("Nothing to print")
+        }
+        else{
+            val stack = Stack<Node>()
+            var node = root;
+            while(true){
+                if(node!=null) {
+                    stack.push(node)
+                    node = node.left
+                }else{
+                    if(stack.isEmpty()) break;
+                    node = stack.pop()
+                    print("  ${node.data}   ")
+                    node = node.right
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
