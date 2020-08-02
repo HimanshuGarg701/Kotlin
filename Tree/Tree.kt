@@ -196,4 +196,29 @@ class Tree {
             }
         }
     }
+
+    fun iterativePostOrder(){
+        val list = ArrayList<Int>()
+        if(root==null){
+            println("No Elements present")
+        }
+        else{
+            val stack = Stack<Node>()
+            stack.add(root)
+            while(!stack.isEmpty()){
+                val removed = stack.pop()
+                list.add(removed.data)
+                if(removed.left!=null){
+                    stack.push(removed.left)
+                }
+                if(removed.right!=null){
+                    stack.push(removed.right)
+                }
+            }
+
+            for(i in (list.size-1).downTo(0)){
+                print("  ${list[i]}  ")
+            }
+        }
+    }
 }

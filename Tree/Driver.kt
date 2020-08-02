@@ -34,4 +34,7 @@ fun main(args : Array<String>){
 
     println("\n------------------LEVEL ORDER---------------------------")
     x.levelOrderPrint()
+
+    println("\n-------------------Iterative post order----------------------")
+    x.iterativePostOrder()
 }
