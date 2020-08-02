@@ -221,4 +221,23 @@ class Tree {
             }
         }
     }
+
+    fun iterativePreorder(){
+        if(root==null){
+            println("Nothing to print")
+        }else{
+            val stack = Stack<Node>()
+            stack.push(root)
+            while(!stack.isEmpty()){
+                val removed = stack.pop()
+                print("  ${removed.data}  ")
+                if(removed.right!=null){
+                    stack.push(removed.right)
+                }
+                if(removed.left!=null){
+                    stack.push(removed.left)
+                }
+            }
+        }
+    }
 }

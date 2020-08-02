@@ -37,4 +37,7 @@ fun main(args : Array<String>){
 
     println("\n-------------------Iterative post order----------------------")
     x.iterativePostOrder()
+
+    println("\n-------------------Iterative pre order-----------------------")
+    x.iterativePreorder()
 }
