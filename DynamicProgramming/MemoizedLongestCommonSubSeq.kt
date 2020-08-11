@@ -17,7 +17,8 @@ private fun longestSubSequence(x:String, y:String, xLen:Int, yLen:Int, matrix:Ar
     }
 
     if(x[xLen-1] == y[yLen-1]){
-        return 1+ longestSubSequence(x,y, xLen-1, yLen-1, matrix)
+        matrix[xLen][yLen] = 1+ longestSubSequence(x,y, xLen-1, yLen-1, matrix)
+        return matrix[xLen][yLen]
     }else{
         matrix[xLen][yLen] = Math.max(longestSubSequence(x,y,xLen-1, yLen, matrix),
                                         longestSubSequence(x,y,xLen,yLen-1, matrix))
