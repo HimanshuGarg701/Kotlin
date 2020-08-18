@@ -261,6 +261,25 @@ class Tree {
             }
         }
     }
+
+    fun diameter(){
+        if(root!=null){
+            diameterHelper(root, 0)
+        }
+    }
+
+    private fun diameterHelper(node:Node?, result:Int):Int{
+        if(node==null){
+            return result
+        }else{
+            val left = diameterHelper(node.left, result)
+            val right = diameterHelper(node.right, result)
+            val tem = Math.max(left, right)+1
+            val tem2 = Math.max(tem, left+right+1)
+            val result2 = Math.max(result, tem2)
+            return result2
+        }
+    }
 }
 
 
