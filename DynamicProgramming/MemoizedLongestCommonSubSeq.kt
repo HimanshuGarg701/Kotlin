@@ -4,6 +4,8 @@ fun main(args:Array<String>){
     val x = "abcdefgh"
     val y = "acdbcdeh"
     val matrix = Array(x.length+1){Array(y.length+1){-1} }
+
+    //Longest common subsequence
     println("Longest subseq : ${longestSubSequence(x, y, x.length, y.length, matrix)}")
 }
 
