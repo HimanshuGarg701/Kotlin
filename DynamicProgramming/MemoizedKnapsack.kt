@@ -8,6 +8,8 @@ fun main(args : Array<String>){
     val values = arrayOf(5,6,3,2,11)
     val matrix = Array(weight.size+1){Array(6){-1}}
     val startTime = System.nanoTime()
+
+    //Finding Profit
     println("Max profit is : ${findProfit(weight, values, weight.size, 5, matrix)}")
     println("Time consumed : ${System.nanoTime()-startTime}")
     println("Num Recursions ${array[0]}")
